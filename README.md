@@ -1,5 +1,5 @@
 # daily quote quiz api
-this simple api is going to return a quote and 4 people of wchoch only one will be author of quote. Same day api will returns same object, object would change every day.
+this simple api is going to return a quote and 4 people of which only one will be author of quote. Same day api will returns same object, object would change every day.
 ## link
 Api link:
   https://6glbppeslg.execute-api.eu-central-1.amazonaws.com/api/quote
