@@ -11,5 +11,5 @@ app.listen(port, ()=>{
 })
 
 app.get("/api/quote", (req, res)=>{
-    res.send({quote : "jakiś tekst", author : "pewien aktor"});
+    res.send({quote : "test", author : "if every push automatically redeploys app"});
 })
