@@ -1,25 +1,33 @@
-# daily quote in polish quiz api / Codzienny cytat po polsku quiz api
-this simple api is going to return a quote in polish and 4 people of which only one will be author of quote. Same day api will returns same object, object would change every day.
+# Zgadnij, w jakim województwie leży to miasto
+api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błędów w pisowni), lub kierunek, w którym znajduje się szukane województwo względem proponowanego
 
-Api będzie zwracać cytat po polsku i czterech ludzi, z których tylko jeden jest autorem cytatu. Jednego dnia api będzie zwracać jeden obiekt, codziennie inny. 
-## link
-Api link:
-  https://6glbppeslg.execute-api.eu-central-1.amazonaws.com/api/quote
-## object wiev
-eg.
-```JSONasJs
-{quote : "Sposobem na rozpoczęcie jest zaprzestanie mówienia i rozpoczęcie działania.", 
-authors : [{name : "Steve Jobs", author : false}, {name : "Walt disney", author : true},{name : "Barack Obama", author : false},{name : "Elżbieta II", author : false}]}
-```
+## linki
+###    miasto:
+  GET https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/randomcity
+###    lista województw:
+  GET https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/wojewodztwa
+###    kierunek:
+  POST https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/api/guess
 
-## usage example
-Axios get request :
 
+## e.g.
+### Axios POST request :
 ```js
-  Axios.get("https://6glbppeslg.execute-api.eu-central-1.amazonaws.com/api/quote")
-        .then(res=>{
-          console.log(res)
-        }).catch(err=>{
-          console.log(err)
+   Axios.post("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/api/guess", {attempt : "lubuskie", city : "Głubczyce"})
+   .then((res)=>{
+            console.log(res.data.result);
+        })
+   .catch((err)=>{
+            console.log(err);
+        })
+```
+### Axios GET request :
+```js
+   Axios.post("http://localhost:1200/api/randomcity")
+   .then((res)=>{
+              console.log(res.data.city);
+        })
+   .catch((err)=>{
+            console.log(err);
         })
 ```
