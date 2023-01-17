@@ -23,7 +23,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 ```
 ### Axios GET request :
 ```js
-   Axios.post("http://localhost:1200/api/randomcity")
+   Axios.get("http://localhost:1200/api/randomcity")
    .then((res)=>{
               console.log(res.data.city);
         })
