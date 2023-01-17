@@ -11,7 +11,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 
 
 ## e.g.
-### Axios POST request :
+### Axios POST request:
 ```js
    Axios.post("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/post/guess", {attempt : "lubuskie", city : "Głubczyce"})
    .then((res)=>{
@@ -21,7 +21,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
             console.log(err);
         })
 ```
-### Axios GET request :
+### Axios GET request:
 ```js
    Axios.get("http://localhost:1200/api/randomcity")
    .then((res)=>{
