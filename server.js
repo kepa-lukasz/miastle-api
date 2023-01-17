@@ -17,7 +17,14 @@ let miasta = {
     "Głogówek" : "opolskie",
     "Baborów" : "opolskie",
     "Kluczbork" : "opolskie",
-    "Chrzanów" : "małopolskie"
+    "Chrzanów" : "małopolskie",
+    "Kaczory" : "wielkopolskie",
+    "Kalisz" : "wielkopolskie",
+    "Kamionka" : "lubelskie",
+    "Karpacz" : "dolnośląskie",
+    "Koniecpol" : "śląskie",
+    "Koło" : "wielkopolskie",
+    "Kleszczele" : "podlaskie"
 }
 let wojewodztwa =
 {
