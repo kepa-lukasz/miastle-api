@@ -37,7 +37,6 @@ let wojewodztwa =
     "małopolskie": [-2, 0.5],
     "podkarpackie": [-2, 1],
     "świętokrzyskie": [-1, 0.5],
-    "podkarpackie": [-1.5],
     "lubelskie": [-0.5, 1],
     "mazowieckie": [0, 0.5],
     "warmińsko-mazurskie": [1.5, 0.5],
