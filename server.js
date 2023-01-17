@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 1200;
+const port = 3000;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
