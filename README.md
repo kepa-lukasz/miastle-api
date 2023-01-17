@@ -13,7 +13,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 ## e.g.
 ### Axios POST request :
 ```js
-   Axios.post("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/api/guess", {attempt : "lubuskie", city : "Głubczyce"})
+   Axios.post("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/post/guess", {attempt : "lubuskie", city : "Głubczyce"})
    .then((res)=>{
             console.log(res.data.result);
         })
