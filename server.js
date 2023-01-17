@@ -60,7 +60,7 @@ app.get("/get/randomcity", (req, res) => {
 })
 
 
-app.post("/api", (req, res) => {
+app.post("/api/guess", (req, res) => {
     try{
         let searched =  miasta[req.body.city];
         let attempt =  req.body.attempt; 
