@@ -7,7 +7,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 ###    lista województw:
   GET https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/wojewodztwa
 ###    kierunek:
-  POST https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/api/guess
+  POST https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/post/guess
 
 
 ## e.g.
