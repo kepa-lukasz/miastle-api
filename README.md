@@ -1,4 +1,4 @@
-# Zgadnij, w jakim województwie leży to miasto
+# Zgadnij, w jakim województwie leży to miasto!
 api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błędów w pisowni), lub kierunek, w którym znajduje się szukane województwo względem proponowanego
 
 ## linki
