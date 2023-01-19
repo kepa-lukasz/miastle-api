@@ -45,24 +45,6 @@ const readWins = () => {
     }
 
 }
-//counter++, save in file
-const addToCounter = () => {
-    try {
-        counter = JSON.parse(readWins()).wins
-        if (counter != -1) {
-            counter++
-            let obj = `{"wins" : ${counter}}`
-            fs.writeFile('files/counter.json', obj);
-        }
-        else {
-            fs.writeFile('files/counter.json', "else");
-        }
-    }
-    catch {
-        fs.writeFile('files/counter.json', "catch");
-    }
-
-}
 
 app.get("/get/wojewodztwa", (req, res) => {
     res.send({ wojewodztwa: Object.keys(wojewodztwa) });
@@ -82,10 +64,6 @@ app.get("/get/randomcity", (req, res) => {
         res.send({ wojewodztwa: "Wystąpił problem po stronie serwera" });
     }
 })
-//returns in count from file
-app.get("/get/wincounter", (req, res) => {
-    res.send(readWins());
-})
 
 
 app.post("/post/guess", (req, res) => {
@@ -102,10 +80,7 @@ app.post("/post/guess", (req, res) => {
         //directions 
         let arrX = (kierunekY == 0) ? "+" : (kierunekY < 0) ? "left" : "right";
         let arrY = (kierunekX == 0) ? "+" : (kierunekX < 0) ? "bottom" : "top";
-        //if game won, counter++
-        if (arrX == "+" && arrY == "+") {
-            addToCounter()
-        }
+       
         res.send({ code: 200, result: `${arrX} ${arrY}` });
     }
     catch {
