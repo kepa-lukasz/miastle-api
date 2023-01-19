@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 3000;
+const port = 1200;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -11,6 +11,7 @@ app.use(express.json());
 app.listen(port, () => {
     console.log(`app running on port ${port}`)
 })
+let counter = 0;
 
 let miasta = {
     "Głubczyce": "opolskie",
@@ -57,6 +58,9 @@ app.get("/get/randomcity", (req, res) => {
     let idx = Math.floor(Math.random() * (cities.length) ) ;
     res.send({"city" : cities[idx]})
 })
+app.get("/get/wincounter", (req, res)=>{
+    res.send({"wins" : counter});
+})
 
 
 app.post("/post/guess", (req, res) => {
@@ -68,6 +72,9 @@ app.post("/post/guess", (req, res) => {
         let kierunekY = wojewodztwa[searched][1] - wojewodztwa[attempt][1]
         let arrX = (kierunekY == 0) ? "+" : (kierunekY < 0) ? "left" : "right";
         let arrY = (kierunekX == 0) ? "+" : (kierunekX < 0) ? "bottom" : "top";
+        if(arrX == "+" && arrY == "+"){
+            counter++;
+        }
         res.send({code : 200, result : `${arrX} ${arrY}`});
     }
     catch{
