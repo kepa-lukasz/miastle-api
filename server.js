@@ -52,14 +52,14 @@ const addToCounter = () => {
         if (counter != -1) {
             counter++
             let obj = `{"wins" : ${counter}}`
-            fs.writeFileSync('files/counter.json', obj);
+            fs.writeFile('files/counter.json', obj);
         }
         else {
-            console.log("error")
+            fs.writeFile('files/counter.json', "else");
         }
     }
     catch {
-        console.log("file error")
+        fs.writeFile('files/counter.json', "catch");
     }
 
 }
