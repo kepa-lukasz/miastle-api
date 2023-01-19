@@ -37,7 +37,7 @@ wojewodztwa = {
 //returns object with wins amount or -1
 const readWins = () => {
     try {
-        let counter = fs.readFileSync('files/counter.json', 'utf8');
+        let counter = fs.readFileSync('./files/counter.json', 'utf8');
         return counter;
     }
     catch {
