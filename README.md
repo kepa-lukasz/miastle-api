@@ -3,17 +3,17 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 
 ## linki
 ###    miasto:
-  GET https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/randomcity
+  GET https://neul0yywx5.execute-api.us-east-2.amazonaws.com/get/randomcity
 ###    lista województw:
-  GET https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/wojewodztwa
+  GET https://neul0yywx5.execute-api.us-east-2.amazonaws.com/get/wojewodztwa
 ###    kierunek:
-  POST https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/post/guess
+  POST https://neul0yywx5.execute-api.us-east-2.amazonaws.com/post/guess
 
 
 ## e.g.
 ### Axios POST request:
 ```js
-   Axios.post("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/post/guess", {attempt : "lubuskie", city : "Głubczyce"})
+   Axios.post("https://neul0yywx5.execute-api.us-east-2.amazonaws.compost/guess", {attempt : "lubuskie", city : "Głubczyce"})
    .then((res)=>{
             console.log(res.data.result);
         })
@@ -23,7 +23,7 @@ api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błęd
 ```
 ### Axios GET request:
 ```js
-   Axios.get("https://wbhiy9wgrg.execute-api.us-east-2.amazonaws.com/get/randomcity")
+   Axios.get("https://neul0yywx5.execute-api.us-east-2.amazonaws.com/get/randomcity")
    .then((res)=>{
               console.log(res.data.city);
         })
