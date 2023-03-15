@@ -1,3 +1,5 @@
+**⚠ WARNING: App doesn't work because of lack of money for server :(**  
+
 # Zgadnij, w jakim województwie leży to miasto!
 api zwraca miasto, listę województw (unikanie literówek/niepotrzebnych błędów w pisowni), lub kierunek, w którym znajduje się szukane województwo względem proponowanego
 
